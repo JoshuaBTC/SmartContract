@@ -33,7 +33,7 @@ contract owned {
 contract tokenRecipient {function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData);}
 
 
-contract CSToken is owned {uint8 public decimals;
+contract "name token" is owned {uint8 public decimals;
 
 	uint[] public agingTimes;
 
@@ -51,16 +51,16 @@ contract CSToken is owned {uint8 public decimals;
 }
 
 
-contract KickicoCrowdsale is owned {
+contract "token name"Crowdsale is owned {
 	uint[] public IcoStagePeriod;
 
 	bool public IcoClosedManually = false;
 
-	uint public threshold = 200000 ether;
+	uint public threshold = hard cap in ether;
 
 	uint public totalCollected = 0;
 
-	uint public pricePerTokenInWei = 3333333;
+	uint public pricePerTokenInWei = cost in wei;
 
 	uint public agingTime = 1539594000;
 
@@ -103,9 +103,9 @@ contract KickicoCrowdsale is owned {
 
 	bool parametersHaveBeenSet = false;
 
-	function KickicoCrowdsale(address _tokenAddress, address _prPool, address _founders, address _advisory, address _bounties, address _lottery, address _angelInvestors, address _oldTokenAddress) {
-		tokenReward = CSToken(_tokenAddress);
-		oldTokenReward = CSToken(_oldTokenAddress);
+	function "token name"Crowdsale(address _tokenAddress, address _prPool, address _founders, address _advisory, address _bounties, address _lottery, address _angelInvestors, address _oldTokenAddress) {
+		tokenReward = "token name"(_tokenAddress);
+		oldTokenReward = "token name"(_oldTokenAddress);
 
 		tokenMultiplier = tokenMultiplier ** tokenReward.decimals();
 
